@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import TaskList from './TaskList';
 
 const App = () => {
 	// `useState` will return two items. The first one is a current value of a piece of state and
@@ -10,7 +11,7 @@ const App = () => {
 				<button onClick={() => setTaskName('posts')}>Posts</button>
 				<button onClick={() => setTaskName('todos')}>Todos</button>
 			</div>
-			{taskName}
+			<TaskList taskName={taskName} />
 		</div>
 	);
 };
