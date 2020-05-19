@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TaskList from './TaskList';
+import Users from './User';
 
 const App = () => {
 	// Using hooks will make sharing logics between components easy.
@@ -13,6 +14,7 @@ const App = () => {
 				<button onClick={() => setTaskName('posts')}>Posts</button>
 				<button onClick={() => setTaskName('todos')}>Todos</button>
 			</div>
+			<Users />
 			<TaskList taskName={taskName} />
 		</div>
 	);
